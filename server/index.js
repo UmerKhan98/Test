@@ -34,6 +34,10 @@ app.use(
   })
 );
 
+app.get("/", (req, res) => {
+  res.json({ "Allah u Akbar": "Alhamdullilahi rabil  aalameen" });
+});
+
 app.get("/api/users/auth", auth, (req, res) => {
   res.status(200).json({
     _id: req.id,
